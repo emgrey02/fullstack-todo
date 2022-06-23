@@ -39,10 +39,13 @@
 <style>
   ul {
     padding: 0;
+    margin: 0;
+    padding-block: 1em;
   }
 
   li {
     border-bottom: 1px solid black;
+    padding-inline-end: .5em;
   }
 
   button {

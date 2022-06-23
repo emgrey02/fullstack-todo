@@ -36,6 +36,7 @@
     justify-content: space-between;
     width: 100%;
     min-width: 325px;
+    max-width: 500px;
   }
 
   .todo-body {
@@ -43,6 +44,8 @@
   }
 
   .title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 500;
   }
 </style>
