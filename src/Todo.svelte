@@ -20,10 +20,29 @@
 
 <article>
   <div class='todo-body'>
-    <h1>{todo.title}</h1>
-    <p>{todo.content}</p>
+    <p class='title'>{todo.title}</p>
+    <p class='content'>{todo.content}</p>
   </div>
   <div class='todo-action'>
     <button on:click={()=>deleteTodo(todo)}>Delete</button>
   </div>
 </article>
+
+<style>
+
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 325px;
+  }
+
+  .todo-body {
+    padding: 1em;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+</style>

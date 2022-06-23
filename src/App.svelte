@@ -8,7 +8,6 @@
     <h1>To-do List</h1>
   </div>
 
-  <AddTodo />
   <Todos />
 </main>
 
@@ -19,6 +18,6 @@
   }
 
   h1 {
-    
+    margin-block: 3rem;
   }
 </style>

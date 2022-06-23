@@ -1,7 +1,9 @@
 <script>
   import {onMount} from 'svelte';
   import Todo from './Todo.svelte';
+  import AddTodo from './AddTodo.svelte';
 
+  let visibleForm = false;
   let todos = [];
 
   onMount(async () => {
@@ -9,6 +11,10 @@
       todos = data;
     })
   });
+
+  function toggleForm() {
+    visibleForm = !visibleForm;
+  }
 
 
 </script>
@@ -24,3 +30,22 @@
 {:else}
 <p class='loading'>loading...</p>
 {/if}
+<button on:click={toggleForm}>{visibleForm ? 'x' : '+'}</button>
+
+{#if visibleForm}
+<AddTodo />
+{/if}
+
+<style>
+  ul {
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid black;
+  }
+
+  button {
+    padding: .1em .8em;
+  }
+</style>
