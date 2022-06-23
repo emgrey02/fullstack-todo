@@ -30,11 +30,13 @@
 {:else}
 <p class='loading'>loading...</p>
 {/if}
-<button on:click={toggleForm}>{visibleForm ? 'x' : '+'}</button>
 
 {#if visibleForm}
 <AddTodo />
 {/if}
+
+<button on:click={toggleForm}>{visibleForm ? 'x' : '+'}</button>
+
 
 <style>
   ul {

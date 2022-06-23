@@ -1,4 +1,6 @@
 <script>
+  import {fade} from 'svelte/transition';
+
   async function handleSubmit(e) {
     const formData = new FormData(e.target);
     const data = {};
@@ -22,13 +24,13 @@
 
 </script>
 
-<div>
+<div transition:fade>
   <form on:submit|preventDefault={handleSubmit}>
     <div>
       <input type='text' id='title' name='title' placeholder='title of todo'>
     </div>
     <div>
-      <textarea id='content' name='content' placeholder='content of todo' rows='5'/>
+      <textarea id='content' name='content' placeholder='content of todo' rows='2'/>
     </div>
     <div>
       <button type='submit'>Submit</button>
@@ -44,11 +46,24 @@
     width: 500px;
   }
 
+  input {
+    font-size: 1.6rem;
+  }
+
   input, textarea {
     width: 100%;
+    border: none;
   }
 
   textarea {
     resize: vertical;
+  }
+
+  textarea::after {
+    content: '';
+    width: 500px;
+    background: black;
+    height: 5px;
+    position: absolute;
   }
 </style>

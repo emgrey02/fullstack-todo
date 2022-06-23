@@ -77,7 +77,7 @@ select {
 /* base styles */
 @font-face {
 	font-family: 'Staatliches';
-	src: url('../public/Staatliches-Regular.ttf') format('truetype');
+	src: url('/Staatliches-Regular.ttf') format('truetype');
 	font-weight: 400;
 }
 
